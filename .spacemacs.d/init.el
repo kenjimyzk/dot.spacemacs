@@ -40,7 +40,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(mozc)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -249,8 +249,28 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; japanese
+  (cond
+   ((eq system-type 'windows-nt)
+    (set-face-font 'default "Ricty Diminished-15")
+    )
+   ((eq system-type 'darwin)
+    (require 'ucs-normalize)
+    (set-file-name-coding-system 'utf-8-hfs)
+    (setq locale-coding-system 'utf-8-hfs)
+    (set-face-font 'default "Ricty Diminished-14")
+    )
+   ((eq system-type 'gnu/linux)
+    (set-face-font 'default "Ricty Diminished-15")
+    (set-fontset-font
+     nil 'japanese-jisx0208
+     (font-spec :family "Ricty Diminished"))
+    (require 'mozc)
+    (setq default-input-method "japanese-mozc")
+    ))
+
   ;; keybinding
-  (global-set-key (kbd "C-h") 'delete-backward-char)
+   (global-set-key (kbd "C-h") 'delete-backward-char)
   (global-set-key (kbd "<F1>") help-map);
 )
 
