@@ -253,12 +253,14 @@ you should place your code here."
   (cond
    ((eq system-type 'windows-nt)
     (set-face-font 'default "Ricty Diminished-15")
+    (toggle-frame-maximized)
     )
    ((eq system-type 'darwin)
     (require 'ucs-normalize)
     (set-file-name-coding-system 'utf-8-hfs)
     (setq locale-coding-system 'utf-8-hfs)
     (set-face-font 'default "Ricty Diminished-14")
+    (toggle-frame-fullscreen)
     )
    ((eq system-type 'gnu/linux)
     (set-face-font 'default "Ricty Diminished-15")
@@ -267,11 +269,14 @@ you should place your code here."
      (font-spec :family "Ricty Diminished"))
     (require 'mozc)
     (setq default-input-method "japanese-mozc")
+    (toggle-frame-maximized)
     ))
 
   ;; keybinding
-   (global-set-key (kbd "C-h") 'delete-backward-char)
+  (global-set-key (kbd "C-h") 'delete-backward-char)
   (global-set-key (kbd "<F1>") help-map);
+  ;;
+  (global-visual-line-mode)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
