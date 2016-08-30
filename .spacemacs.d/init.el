@@ -274,7 +274,7 @@ you should place your code here."
 
   ;; keybinding
   (global-set-key (kbd "C-h") 'delete-backward-char)
-  (global-set-key (kbd "<F1>") help-map);
+  ;; (global-set-key (kbd "<f1>") help-map);
   ;;
   (global-visual-line-mode)
 )
