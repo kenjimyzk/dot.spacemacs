@@ -271,7 +271,7 @@ you should place your code here."
     (setq default-input-method "japanese-mozc")
     (toggle-frame-maximized)
     ))
-
+  (load-file "~/.spacemacs.d/00migemo.el")
   ;; keybinding
   (global-set-key (kbd "C-h") 'delete-backward-char)
   ;; (global-set-key (kbd "<f1>") help-map);
