@@ -272,6 +272,7 @@ you should place your code here."
     (toggle-frame-maximized)
     ))
   (load-file "~/.spacemacs.d/00migemo.el")
+  (load-file "~/.spacemacs.d/00avy.el")
   ;; keybinding
   (global-set-key (kbd "C-h") 'delete-backward-char)
   ;; (global-set-key (kbd "<f1>") help-map);
