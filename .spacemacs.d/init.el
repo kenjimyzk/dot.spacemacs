@@ -40,7 +40,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(mozc migemo avy-migemo) 
+   dotspacemacs-additional-packages '(mozc migemo avy-migemo ddskk)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -272,6 +272,7 @@ you should place your code here."
     (toggle-frame-maximized)
     ))
   (load-file "~/.spacemacs.d/00migemo.el")
+  (load-file "~/.spacemacs.d/00ddskk.el")
   ;; keybinding
   (global-set-key (kbd "C-h") 'delete-backward-char)
   ;; (global-set-key (kbd "<f1>") help-map);
