@@ -44,7 +44,8 @@ values."
                                       migemo
                                       avy-migemo
                                       ddskk
-                                      japanese-holidays)
+                                      japanese-holidays
+                                      pangu-spacing)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -278,6 +279,7 @@ you should place your code here."
   (load-file "~/.spacemacs.d/00migemo.el")
   (load-file "~/.spacemacs.d/00ddskk.el")
   (load-file "~/.spacemacs.d/00calendar.el")
+  (load-file "~/.spacemacs.d/00pangu-spacing.el")
   ;; keybinding
   (global-set-key (kbd "C-h") 'delete-backward-char)
   ;; (global-set-key (kbd "<f1>") help-map);
