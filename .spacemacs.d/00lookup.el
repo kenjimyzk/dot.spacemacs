@@ -1,0 +1,25 @@
+;; lookup
+(add-to-list 'load-path "~/.spacemacs.d/lisp/lookup/")
+(setq lookup-enable-splash nil)
+(autoload 'lookup "lookup" nil t)
+(autoload 'lookup-region "lookup" nil t)
+(autoload 'lookup-pattern "lookup" nil t)
+(global-set-key (kbd "C-x l") 'lookup-pattern)
+(global-set-key (kbd "C-x C-l") 'lookup-region)
+
+(setq lookup-default-dictionary-options
+      '((:stemmer .  stem-english)))
+(setq lookup-use-kakasi nil)
+(setq lookup-search-agents '(
+    (ndeb "~/dict/Cobuild1")
+    (ndeb "~/dict/Longman4")
+    (ndeb "~/dict/OALD8")
+    (ndeb "~/dict/NKEMEJ")
+    (ndeb "~/dict/NKEMJE")
+    (ndeb "~/dict/KANJIGEN")
+    (ndeb "~/dict/KEIZAI")
+    (ndeb "~/dict/KOJIEN5")
+    (ndeb "~/dict/COLLOC")
+    (ndeb "~/dict/SRD-FPW")
+    (ndeb "~/dict/EIDAI6")
+    (ndeb "~/dict/WADAI5")))

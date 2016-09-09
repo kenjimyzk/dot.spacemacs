@@ -280,6 +280,7 @@ you should place your code here."
   (load-file "~/.spacemacs.d/00ddskk.el")
   (load-file "~/.spacemacs.d/00calendar.el")
   (load-file "~/.spacemacs.d/00pangu-spacing.el")
+  (load-file "~/.spacemacs.d/00lookup.el")
   ;; keybinding
   (global-set-key (kbd "C-h") 'delete-backward-char)
   ;; (global-set-key (kbd "<f1>") help-map);
